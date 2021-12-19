@@ -143,8 +143,7 @@ class NPCPlugin extends PluginBase{
 									$nbt->setByte("isCustomSkin", 1);
 									$nbt->setTag("Skin", $this->getSkinCompound($skin));
 
-									/** @var NPCHuman $entity */
-									$entity = new NPCHuman($sender->getLocation(), $nbt);
+                                    $entity = new NPCHuman($sender->getLocation(), $nbt);
 									$this->entities[self::pos2hash($sender->getLocation())] = $entity;
 
 									$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
@@ -155,8 +154,7 @@ class NPCPlugin extends PluginBase{
 								$nbt->setString("name", $args[2]);
 								$nbt->setTag("Skin", $this->getSkinCompound($skin));
 
-								/** @var NPCHuman $entity */
-								$entity = new NPCHuman($sender->getLocation(), $nbt);
+                                $entity = new NPCHuman($sender->getLocation(), $nbt);
 								$this->entities[self::pos2hash($sender->getLocation())] = $entity;
 
 								$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
@@ -165,8 +163,7 @@ class NPCPlugin extends PluginBase{
 							if(in_array($args[1], array_keys(EntityConfig::NETWORK_IDS))){
 								$nbt = EntityFactory::createBaseNBT($sender->getPosition()->asVector3(), null, $sender->getLocation()->getYaw(), $sender->getLocation()->getPitch());
 								$nbt->setString("name", $args[2]);
-								/** @var EntityBase $entity */
-								$entity = new CustomEntity(EntityConfig::NETWORK_IDS[$args[1]], $sender->getLocation(), $nbt);
+                                $entity = new CustomEntity(EntityConfig::NETWORK_IDS[$args[1]], $sender->getLocation(), $nbt);
 								$this->entities[self::pos2hash($sender->getLocation())] = $entity;
 								$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
 							}else{
