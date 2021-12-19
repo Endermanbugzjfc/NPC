@@ -127,7 +127,7 @@ class NPCPlugin extends PluginBase{
 									}
 								}
 								try{
-									$skin = $this->imageToSkin($sender, $path, isset($geometryName) ? $geometryName : "", isset($geometryData) ? $geometryData : "");
+									$skin = $this->imageToSkin($sender, $path, $geometryName ?? "", $geometryData ?? "");
 								}catch(ExtensionNotLoadedException $e){
 									$bool = false;
 									$sender->sendMessage(PluginLang::$prefix . $e->getMessage());
