@@ -329,7 +329,7 @@ class NPCPlugin extends PluginBase{
 		for($y = 0; $y < imagesy($img); $y++){
 			for($x = 0; $x < imagesx($img); $x++){
 				$rgba = @imagecolorat($img, $x, $y);
-				$a = ((~((int) ($rgba >> 24))) << 1) & 0xff;
+				$a = ((~($rgba >> 24)) << 1) & 0xff;
 				$r = ($rgba >> 16) & 0xff;
 				$g = ($rgba >> 8) & 0xff;
 				$b = $rgba & 0xff;
