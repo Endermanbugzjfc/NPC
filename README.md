@@ -6,12 +6,12 @@ This plugin is designed for **[PocketMine-MP](https://github.com/pmmp/PocketMine
 
 [![](https://poggit.pmmp.io/shield.state/NPC)](https://poggit.pmmp.io/p/NPC)
 
-|command|usage|
-|------|---|
-|/npc create [type] [name] [skinPath(optional)] [geometryPath(optional)|Create an entity.
-|/npc remove|Remove an entity.
-|/npc edit [message/command/scale] [args...]|Edit an entity.
-|/npc get|Get an entities.
+| command                                                                | usage             |
+|------------------------------------------------------------------------|-------------------|
+| /npc create [type] [name] [skinPath(optional)] [geometryPath(optional) | Create an entity. |
+| /npc remove                                                            | Remove an entity. |
+| /npc edit [message/command/scale] [args...]                            | Edit an entity.   |
+| /npc get                                                               | Get an entities.  |
 
 ### Feature
 
