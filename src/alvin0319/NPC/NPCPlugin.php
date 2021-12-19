@@ -21,12 +21,9 @@ use pocketmine\level\Location;
 use pocketmine\nbt\LittleEndianNBTStream;
 use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\nbt\tag\ListTag;
-use pocketmine\Player;
 use pocketmine\plugin\PluginBase;
-
 use function array_keys;
 use function array_map;
-use function array_merge;
 use function array_values;
 use function chr;
 use function count;
@@ -212,8 +209,7 @@ class NPCPlugin extends PluginBase{
 									$nbt->setByte("isCustomSkin", 1);
 									$nbt->setTag($this->getSkinCompound($skin));
 
-									/** @var NPCHuman $entity */
-									$entity = new NPCHuman($sender->getLocation(), $nbt);
+                                    $entity = new NPCHuman($sender->getLocation(), $nbt);
 									$this->entities[$entity->getId()] = $entity;
 
 									$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
@@ -224,8 +220,7 @@ class NPCPlugin extends PluginBase{
 								$nbt->setString("name", $args[2]);
 								$nbt->setTag($this->getSkinCompound($skin));
 
-								/** @var NPCHuman $entity */
-								$entity = new NPCHuman($sender->getLocation(), $nbt);
+                                $entity = new NPCHuman($sender->getLocation(), $nbt);
 								$this->entities[$entity->getId()] = $entity;
 
 								$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
@@ -234,8 +229,7 @@ class NPCPlugin extends PluginBase{
 							if(in_array($args[1], array_keys(EntityConfig::NETWORK_IDS))){
 								$nbt = new CompoundTag();
 								$nbt->setString("name", $args[2]);
-								/** @var EntityBase $entity */
-								$entity = new CustomEntity(EntityConfig::NETWORK_IDS[$args[1]], $sender->getLocation(), $nbt);
+                                $entity = new CustomEntity(EntityConfig::NETWORK_IDS[$args[1]], $sender->getLocation(), $nbt);
 								$this->entities[$entity->getId()] = $entity;
 								$sender->sendMessage(PluginLang::$prefix . $this->lang->translateLanguage("entity.spawn", [$entity->getRealName()]));
 							}else{
