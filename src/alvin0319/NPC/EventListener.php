@@ -27,8 +27,8 @@ class EventListener implements Listener{
 				if(isset(Queue::$removeQueue[$player->getName()])){
 					if($entity instanceof EntityBase){
 						$player->sendMessage(PluginLang::$prefix . NPCPlugin::getInstance()->getLanguage()->translateLanguage("entity.delete"));
-						foreach($entity->getViewers() as $player){
-							$entity->despawnTo($player);
+						foreach($entity->getViewers() as $sp){
+							$entity->despawnTo($sp);
 						}
 
 						NPCPlugin::getInstance()->removeEntity($entity);
