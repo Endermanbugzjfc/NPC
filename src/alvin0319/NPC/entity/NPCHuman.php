@@ -56,7 +56,7 @@ class NPCHuman extends EntityBase{
 			$skinTag->getByteArray("GeometryData", "")
 		);
 
-		$this->isCustomSkin = $nbt->getByte("isCustomSkin", 0) === 1 ? true : false;
+		$this->isCustomSkin = $nbt->getByte("isCustomSkin", 0) === 1;
 
 		if($nbt->hasTag("width", FloatTag::class) and $nbt->hasTag("height", FloatTag::class)){
 			$this->width = $nbt->getFloat("width");

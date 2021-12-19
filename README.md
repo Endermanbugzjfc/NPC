@@ -8,12 +8,12 @@ This plugin is designed for **[PocketMine-MP](https://github.com/pmmp/PocketMine
 
 >Notice: This plugin is not complete!
 
-|command|usage|
-|------|---|
-|/npc create [type] [name] [skinPath(optional)] [geometryPath(optional)|Create an entity.
-|/npc remove|Remove an entity.
-|/npc edit [message/command] [args...]|Edit an entity.
-|/npc get|Get an entities.
+| command                                                                | usage             |
+|------------------------------------------------------------------------|-------------------|
+| /npc create [type] [name] [skinPath(optional)] [geometryPath(optional) | Create an entity. |
+| /npc remove                                                            | Remove an entity. |
+| /npc edit [message/command] [args...]                                  | Edit an entity.   |
+| /npc get                                                               | Get an entities.  |
 
 ### Feature
 
