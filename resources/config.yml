@@ -3,3 +3,7 @@ images: []
 lang: eng
 
 spawn-radius: 10
+
+disable-see-player: false
+
+config-version: 1.0.1
