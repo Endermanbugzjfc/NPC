@@ -1,4 +1,4 @@
-# NPC
+# NPC <!-- -->
 
 The NPC plugin for [PocketMine-MP](https://github.com/pmmp/PocketMine-MP)
 
