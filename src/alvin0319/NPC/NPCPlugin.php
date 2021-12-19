@@ -90,7 +90,7 @@ class NPCPlugin extends PluginBase{
 		$nbt = CompoundTag::create();
 		$tag = new ListTag();
 
-		foreach(array_values($this->entities) as $baseEntity){
+		foreach($this->entities as $baseEntity){
 			$tag->push($baseEntity->nbtSerialize());
 		}
 		$nbt->setTag("npc", $tag);
@@ -287,7 +287,7 @@ class NPCPlugin extends PluginBase{
 	 * @return EntityBase|null
 	 */
 	public function getEntityById(int $id) : ?EntityBase{
-		foreach(array_values($this->entities) as $entityBase){
+		foreach($this->entities as $entityBase){
 			if($entityBase->getId() === $id){
 				return $entityBase;
 			}
